@@ -1,0 +1,98 @@
+
+label {
+  color: white;
+  text-shadow: 1px 1px 20px rgb(211, 211, 200), -1px -1px 20px rgb(240, 240, 234);
+}
+.animated-border-btn {
+            position: relative;
+            color: #fff;
+            background: #1c1697;
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .animated-border-btn span {
+            position: relative;
+            z-index: 2;
+        }
+
+        .animated-border-btn::before,
+        .animated-border-btn::after {
+            content: '';
+            position: absolute;
+            background: linear-gradient(90deg, transparent, rgb(235, 235, 239), rgb(182, 206, 206), transparent);
+            z-index: 1;
+        }
+
+        /* Top border animation */
+        .animated-border-btn::before {
+            height: 2px;
+            width: 100%;
+            top: 0;
+            left: -100%;
+            animation: moveTop 2s linear infinite;
+        }
+
+        /* Right border animation */
+        .animated-border-btn::after {
+            width: 2px;
+            height: 100%;
+            top: -100%;
+            right: 0;
+            animation: moveRight 2s linear infinite;
+            animation-delay: 0.5s;
+        }
+
+        /* Bottom border */
+        .animated-border-btn .bottom-border {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            bottom: 0;
+            right: -100%;
+            background: linear-gradient(270deg, transparent, rgb(225, 225, 244), rgb(216, 231, 231), transparent);
+            animation: moveBottom 2s linear infinite;
+            animation-delay: 1s;
+            z-index: 1;
+        }
+
+        /* Left border */
+        .animated-border-btn .left-border {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            bottom: -100%;
+            left: 0;
+            background: linear-gradient(180deg, transparent, rgb(230, 230, 235), rgb(206, 225, 225), transparent);
+            animation: moveLeft 2s linear infinite;
+            animation-delay: 1.5s;
+            z-index: 1;
+        }
+
+        @keyframes moveTop {
+            0% { left: -100%; }
+            50% { left: 100%; }
+            100% { left: 100%; }
+        }
+
+        @keyframes moveRight {
+            0% { top: -100%; }
+            50% { top: 100%; }
+            100% { top: 100%; }
+        }
+
+        @keyframes moveBottom {
+            0% { right: -100%; }
+            50% { right: 100%; }
+            100% { right: 100%; }
+        }
+
+        @keyframes moveLeft {
+            0% { bottom: -100%; }
+            50% { bottom: 100%; }
+            100% { bottom: 100%; }
+        }
