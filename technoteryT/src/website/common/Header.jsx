@@ -11,11 +11,6 @@ function Header({title,data}) {
           <NavLink to="/" className="navbar-brand p-0">
             <h1 className="m-0"><i className="fa fa-user-tie me-2" />Technotry</h1>
           </NavLink>
-          <nav className='navbar-nav nav-item'>
-            <NavLink to="/" className="nav-item ms-3">Home</NavLink>
-            <NavLink to="/product" className="nav-item mx-3">Product</NavLink>
-            <NavLink to="/addpro" className="nav-item">Add Product</NavLink>
-          </nav>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span className="fa fa-bars" />
           </button>
@@ -26,7 +21,11 @@ function Header({title,data}) {
               <NavLink to="/addpro" className="nav-item nav-link">Add Product</NavLink>
               <NavLink to="/contact" className="nav-item nav-link">Contact</NavLink>
             </div>
-            <button type="button" className="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i className="fa fa-search" /></button>
+          </div>
+          <div className='d-flex'>
+            <NavLink to="/" className="nav-item ms-3">Home</NavLink>
+            <NavLink to="/product" className="nav-item mx-3">Product</NavLink>
+            <NavLink to="/addpro" className="nav-item">Add Product</NavLink>
           </div>
         </nav>
         <div className="container-fluid bg-primary py-5 bg-header" style={{ marginBottom: 90 }}>
